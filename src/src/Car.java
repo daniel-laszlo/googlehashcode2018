@@ -3,14 +3,6 @@ public class Car {
     private int identifier;
     private Ride ride = null;
 
-	public int getTimeToComplete() {
-		return timeToComplete;
-	}
-
-	public void setTimeToComplete(int timeToComplete) {
-		this.timeToComplete = timeToComplete;
-	}
-
 	// Time to complete the current ride
 	private int timeToComplete = 0;
 
@@ -22,18 +14,22 @@ public class Car {
         return ride != null;
     }
 
+	public int getTimeToComplete() {
+		return timeToComplete;
+	}
+
+	public void setTimeToComplete(int timeToComplete) {
+		this.timeToComplete = timeToComplete;
+	}
+
     public void setRide(Ride newRide) {
-		int waitTime = ride.getStart() - state. - Coordinate.distance(car.getCurrentCoordinate(), ride.getPickupPlace())
-        timeToComplete = Coordinate.distance(this.currentCoordinate, newRide.getPickupPlace()) +
-    	ride = newRide;
+		int waitTime = ride.getStart() - FileReader.state.getCurrentStep() - Coordinate.distance(currentCoordinate, ride.getPickupPlace());
+        timeToComplete = Coordinate.distance(this.currentCoordinate, newRide.getPickupPlace()) + newRide.getDistance() + waitTime;
+        ride = newRide;
     }
 
     public int getIdentifier() {
         return identifier;
-    }
-
-    public void setIdentifier(int identifier) {
-        this.identifier = identifier;
     }
 
     public Ride getRide() {

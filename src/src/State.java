@@ -6,6 +6,7 @@ public class State {
     private int rideCount;
     private int bonusCount;
     private int stepCount;
+    private int currentStep;
 
     public State(String[] args) {
         this.rowCount = Integer.parseInt(args[0]);
@@ -14,6 +15,15 @@ public class State {
         this.rideCount = Integer.parseInt(args[3]);
         this.bonusCount = Integer.parseInt(args[4]);
         this.stepCount = Integer.parseInt(args[5]);
+        this.currentStep = 0;
+    }
+
+    public int getCurrentStep() {
+        return currentStep;
+    }
+
+    public void setCurrentStep(int currentStep) {
+        this.currentStep = currentStep;
     }
 
     public int getRowCount() {

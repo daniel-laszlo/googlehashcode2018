@@ -3,6 +3,17 @@ public class Car {
     private int identifier;
     private Ride ride = null;
 
+	public int getTimeToComplete() {
+		return timeToComplete;
+	}
+
+	public void setTimeToComplete(int timeToComplete) {
+		this.timeToComplete = timeToComplete;
+	}
+
+	// Time to complete the current ride
+	private int timeToComplete = 0;
+
     // Only refreshing when ride or assign is over
     private Coordinate currentCoordinate;
 
@@ -12,7 +23,9 @@ public class Car {
     }
 
     public void setRide(Ride newRide) {
-        ride = newRide;
+		int waitTime = ride.getStart() - state. - Coordinate.distance(car.getCurrentCoordinate(), ride.getPickupPlace())
+        timeToComplete = Coordinate.distance(this.currentCoordinate, newRide.getPickupPlace()) +
+    	ride = newRide;
     }
 
     public int getIdentifier() {

@@ -9,8 +9,8 @@ public class MatrixWrapper {
 
 	public static void doSth(int[][] matrix, List<Ride> rides, List<Car> cars) {
 		int[] chosenRides = (new HungarianAlgorithm(matrix).execute());
-		for (int chosenRide = 0; chosenRide < chosenRides.length; chosenRide++) {
-			int chosenCar = chosenRides[chosenRide];
+		for (int chosenCar = 0; chosenCar < chosenRides.length; chosenCar++) {
+			int chosenRide = chosenRides[chosenCar];
 			Car car = cars.get(chosenCar);
 			Ride ride = rides.get(chosenRide);
 			ride.setAssignedCar(car);

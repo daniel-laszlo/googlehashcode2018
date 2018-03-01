@@ -9,7 +9,7 @@ import java.util.List;
 public class FileReader {
 
     private BufferedReader bufferedReader;
-    private State state;
+    public static State state;
     private List<Ride> rides;
     private List<Car> cars;
 

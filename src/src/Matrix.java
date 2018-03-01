@@ -21,21 +21,19 @@ public class Matrix {
 			for (int j = 0; j < filteredRideList.size(); ++j) {
 				Ride ride = filteredRideList.get(j);
 				int distanceBetweenCarAndPickupPlace = Coordinate.distance(car.getCurrentCoordinate(), ride.getPickupPlace());
+				int rideIsFulfilledAtStep = step + distanceBetweenCarAndPickupPlace + ride.getDistance();
 				// nem erunk oda idoben
-				if (distanceBetweenCarAndPickupPlace + step + ride.getDistance() > state.getStepCount()) {
+				if (rideIsFulfilledAtStep > state.getStepCount() || rideIsFulfilledAtStep > ride.getEnd()) {
 					matrix[i][j] = 0;
 				// kesobb er oda
 				} else if (step + distanceBetweenCarAndPickupPlace > ride.getStart()) {
-					matrix[i][j] =
+					matrix[i][j] = ride.getDistance();
+				// idoben, vagy elotte er oda
+				} else if (step + distanceBetweenCarAndPickupPlace <= ride.getStart()) {
+					matrix[i][j] = ride.getDistance() + state.getBonusCount() - (ride.getStart() - step - distanceBetweenCarAndPickupPlace);
 				}
 			}
 		}
-
-		for (Car car : filteredCarList) {
-			for (Ride ride : filteredRideList) {
-
-			}
-		}
-
+		return matrix;
 	}
 }

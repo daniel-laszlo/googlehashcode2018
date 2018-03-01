@@ -23,9 +23,9 @@ public class Car {
 	}
 
     public void setRide(Ride newRide) {
+		ride = newRide;
 		int waitTime = ride.getStart() - FileReader.state.getCurrentStep() - Coordinate.distance(currentCoordinate, ride.getPickupPlace());
-        timeToComplete = Coordinate.distance(this.currentCoordinate, newRide.getPickupPlace()) + newRide.getDistance() + waitTime;
-        ride = newRide;
+        timeToComplete = Coordinate.distance(this.currentCoordinate, ride.getPickupPlace()) + ride.getDistance() + waitTime;
     }
 
     public int getIdentifier() {

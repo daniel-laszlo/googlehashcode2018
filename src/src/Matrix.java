@@ -34,7 +34,7 @@ public class Matrix {
 				}
 			}
 		}
-		if (matrix.length > 0)
+		if (matrix.length > 0 && matrix[0].length > 0)
 			MatrixWrapper.doSth(matrix, filteredRideList, filteredCarList);
 		return matrix;
 	}

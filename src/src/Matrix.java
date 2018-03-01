@@ -6,20 +6,35 @@ import java.util.stream.Collectors;
  */
 public class Matrix {
 
-
-
-	public static int[][] calculateMatrix(List<Car> carList, List<Ride> rideList, State state) {
+	public static int[][] calculateMatrix(List<Car> carList, List<Ride> rideList, State state, int step) {
 		List<Car> filteredCarList = carList.stream()
 				.filter(car -> !car.isAssigned())
 				.collect(Collectors.toList());
-
-
 		List<Ride> filteredRideList = rideList.stream()
 				.filter(ride -> !ride.isAssigned())
 				.collect(Collectors.toList());
 
-		for (Car car : filteredCarList) {
+		int[][] matrix = new int[filteredCarList.size()][filteredRideList.size()];
 
+		for (int i = 0; i < filteredCarList.size(); ++i) {
+			Car car = filteredCarList.get(i);
+			for (int j = 0; j < filteredRideList.size(); ++j) {
+				Ride ride = filteredRideList.get(j);
+				int distanceBetweenCarAndPickupPlace = Coordinate.distance(car.getCurrentCoordinate(), ride.getPickupPlace());
+				// nem erunk oda idoben
+				if (distanceBetweenCarAndPickupPlace + step + ride.getDistance() > state.getStepCount()) {
+					matrix[i][j] = 0;
+				// kesobb er oda
+				} else if (step + distanceBetweenCarAndPickupPlace > ride.getStart()) {
+					matrix[i][j] =
+				}
+			}
+		}
+
+		for (Car car : filteredCarList) {
+			for (Ride ride : filteredRideList) {
+
+			}
 		}
 
 	}

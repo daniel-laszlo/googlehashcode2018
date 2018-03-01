@@ -40,4 +40,8 @@ public class Car {
         this.currentCoordinate = currentCoordinate;
         this.identifier = identifier;
     }
+
+    public String toString() {
+        return "Car: " + this.identifier + " current coord: " + this.currentCoordinate + " ride: " + this.ride;
+    }
 }

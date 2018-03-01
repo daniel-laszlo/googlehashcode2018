@@ -10,6 +10,14 @@ public class Ride {
         this.identifier = identifier;
     }
 
+    public int getDistance() {
+        return Coordinate.distance(pickupPlace, dropPlace);
+    }
+
+    public int latestStart() {
+        return end - getDistance() - 1;
+    }
+
     private int identifier;
 
     // Start time
@@ -86,5 +94,22 @@ public class Ride {
 
     public void setAssignedCar(Car assignedCar) {
         this.assignedCar = assignedCar;
+    }
+
+    public String toString() {
+        return "Ride: "
+                + this.identifier
+                + " assigned car: "
+                + this.assignedCar
+                + " done: "
+                + this.done
+                + " start place: "
+                + this.pickupPlace
+                + " drop place: "
+                + this.dropPlace
+                + " start: "
+                + this.start
+                + " end: "
+                + this.end;
     }
 }

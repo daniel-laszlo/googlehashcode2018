@@ -31,4 +31,8 @@ public class Coordinate {
 		this.c = c;
 	}
 
+	public String toString() {
+        return "Coordinate: " + this.c + " x " + this.r;
+    }
+
 }

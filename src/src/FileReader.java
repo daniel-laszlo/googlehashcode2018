@@ -55,7 +55,7 @@ public class FileReader {
         this.cars = new ArrayList<>();
     }
 
-    void createCars() {
+    private void createCars() {
         for (int i = 0; i < state.getVehicleCount(); ++i) {
             cars.add(new Car(null, null, i));
         }
@@ -75,5 +75,21 @@ public class FileReader {
             }
             ++lineCounter;
         }
+        createCars();
+        printAll();
+    }
+
+    public void printAll() {
+        System.out.println("Initial state: "
+                + " Vehicle count: " + state.getVehicleCount()
+                + " Bonus amount: " + state.getBonusCount()
+                + " Column: " + state.getColCount()
+                + " Rows: " + state.getRowCount()
+                + " Rides: " + state.getRideCount()
+                + " Vehicles: " + state.getVehicleCount()
+                + " Step count: " + state.getStepCount()
+        );
+        rides.forEach( System.out::println );
+        cars.forEach( System.out::println );
     }
 }

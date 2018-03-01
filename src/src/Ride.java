@@ -1,5 +1,17 @@
 public class Ride {
 
+    public Ride(String[] args, int identifier) {
+        this.start = Integer.parseInt(args[4]);
+        this.end = Integer.parseInt(args[5]);
+        this.pickupPlace = new Coordinate(Integer.parseInt(args[0]), Integer.parseInt(args[1]));
+        this.dropPlace = new Coordinate(Integer.parseInt(args[2]), Integer.parseInt(args[3]));
+        this.assignedCar = null;
+        this.done = false;
+        this.identifier = identifier;
+    }
+
+    private int identifier;
+
     // Start time
     private int start;
 
@@ -60,4 +72,19 @@ public class Ride {
         return assignedCar != null;
     }
 
+    public int getIdentifier() {
+        return identifier;
+    }
+
+    public void setIdentifier(int identifier) {
+        this.identifier = identifier;
+    }
+
+    public Car getAssignedCar() {
+        return assignedCar;
+    }
+
+    public void setAssignedCar(Car assignedCar) {
+        this.assignedCar = assignedCar;
+    }
 }

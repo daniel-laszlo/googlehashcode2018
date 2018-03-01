@@ -19,4 +19,8 @@ public class Coordinate {
         this.r = r;
     }
 
+    public static int distance(Coordinate from, Coordinate to) {
+        return Math.abs(to.c -  from.c) + Math.abs(to.r - to.c);
+    }
+
 }

@@ -23,4 +23,12 @@ public class Coordinate {
         return Math.abs(to.c -  from.c) + Math.abs(to.r - to.c);
     }
 
+	public int getC() {
+		return c;
+	}
+
+	public void setC(int c) {
+		this.c = c;
+	}
+
 }

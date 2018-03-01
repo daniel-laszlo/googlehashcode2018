@@ -48,16 +48,16 @@ public class FileReader {
     }
 
     public void printAll() {
-        System.out.println("Initial state: "
-                + " Vehicle count: " + state.getVehicleCount()
-                + " Bonus amount: " + state.getBonusCount()
-                + " Column: " + state.getColCount()
-                + " Rows: " + state.getRowCount()
-                + " Rides: " + state.getRideCount()
-                + " Vehicles: " + state.getVehicleCount()
-                + " Step count: " + state.getStepCount()
-        );
-        rides.forEach( System.out::println );
-        cars.forEach( System.out::println );
+//        System.out.println("Initial state: "
+//                + " Vehicle count: " + state.getVehicleCount()
+//                + " Bonus amount: " + state.getBonusCount()
+//                + " Column: " + state.getColCount()
+//                + " Rows: " + state.getRowCount()
+//                + " Rides: " + state.getRideCount()
+//                + " Vehicles: " + state.getVehicleCount()
+//                + " Step count: " + state.getStepCount()
+//        );
+        //rides.forEach( System.out::println );
+        //cars.forEach( System.out::println );
     }
 }

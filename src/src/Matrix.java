@@ -34,7 +34,8 @@ public class Matrix {
 				}
 			}
 		}
-		MatrixWrapper.doSth(matrix, filteredRideList, filteredCarList);
+		if (matrix.length > 0)
+			MatrixWrapper.doSth(matrix, filteredRideList, filteredCarList);
 		return matrix;
 	}
 }

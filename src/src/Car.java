@@ -58,9 +58,9 @@ public class Car {
         if (ride != null) {
             if (timeToComplete == 0) {
                 this.currentCoordinate = ride.getDropPlace();
-                ride = null;
                 ride.setAssignedCar(null);
                 ride.setDone(true);
+                ride = null;
             }
             timeToComplete --;
         }

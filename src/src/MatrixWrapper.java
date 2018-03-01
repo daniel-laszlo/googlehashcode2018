@@ -24,4 +24,19 @@ public class MatrixWrapper {
 			}
 		}
 	}
+
+	public static void printSolution() {
+		for (int i = 0; i < FileReader.state.getVehicleCount();i++) {
+			List<Integer> list = carRides.get(i);
+			if (list == null) {
+				System.out.println(0);
+			} else {
+				System.out.print(list.size() + " ");
+				for (int j : list) {
+					System.out.print(list.get(j) + " ");
+				}
+				System.out.println();
+			}
+		}
+	}
 }

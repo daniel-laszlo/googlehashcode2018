@@ -12,5 +12,6 @@ public class Main {
         		FileReader.cars.get(i).iterate();
 			}
 		}
+		MatrixWrapper.printSolution();
     }
 }

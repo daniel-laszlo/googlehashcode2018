@@ -9,41 +9,9 @@ import java.util.List;
 public class FileReader {
 
     private BufferedReader bufferedReader;
-    private State state;
-    private List<Ride> rides;
-    private List<Car> cars;
-
-    public BufferedReader getBufferedReader() {
-        return bufferedReader;
-    }
-
-    public void setBufferedReader(BufferedReader bufferedReader) {
-        this.bufferedReader = bufferedReader;
-    }
-
-    public State getState() {
-        return state;
-    }
-
-    public void setState(State state) {
-        this.state = state;
-    }
-
-    public List<Ride> getRides() {
-        return rides;
-    }
-
-    public void setRides(List<Ride> rides) {
-        this.rides = rides;
-    }
-
-    public List<Car> getCars() {
-        return cars;
-    }
-
-    public void setCars(List<Car> cars) {
-        this.cars = cars;
-    }
+    public static State state;
+    public static List<Ride> rides;
+    public static List<Car> cars;
 
     public FileReader(String fileName) {
         try {

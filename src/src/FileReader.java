@@ -25,7 +25,7 @@ public class FileReader {
 
     private void createCars() {
         for (int i = 0; i < state.getVehicleCount(); ++i) {
-            cars.add(new Car(null, null, i));
+            cars.add(new Car(null, new Coordinate(0,0), i));
         }
     }
 

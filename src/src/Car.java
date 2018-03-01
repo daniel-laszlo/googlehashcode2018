@@ -53,4 +53,14 @@ public class Car {
     public String toString() {
         return "Car: " + this.identifier + " current coord: " + this.currentCoordinate + " ride: " + this.ride;
     }
+
+    public void iterate() {
+        if (ride != null) {
+            timeToComplete --;
+            if (timeToComplete == 0) {
+                this.currentCoordinate = ride.getDropPlace();
+                ride = null;
+            }
+        }
+    }
 }

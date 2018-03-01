@@ -34,6 +34,7 @@ public class Matrix {
 				}
 			}
 		}
+		MatrixWrapper.doSth(matrix, filteredRideList, filteredCarList);
 		return matrix;
 	}
 }
